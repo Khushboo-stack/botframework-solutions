@@ -55,8 +55,8 @@ namespace ITSMSkill.Dialogs
                 CheckUrgency,
                 InputUrgency,
                 SetUrgency,
-                //GetAuthToken,
-                //AfterGetAuthToken,
+                GetAuthToken,
+                AfterGetAuthToken,
                 CreateTicket
             };
 
@@ -70,8 +70,8 @@ namespace ITSMSkill.Dialogs
 
             var displayExisting = new WaterfallStep[]
             {
-                //GetAuthToken,
-                //AfterGetAuthToken,
+                GetAuthToken,
+                AfterGetAuthToken,
                 ShowKnowledge,
                 IfKnowledgeHelp
             };
