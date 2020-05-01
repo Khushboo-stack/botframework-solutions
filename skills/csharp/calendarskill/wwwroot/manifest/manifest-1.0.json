@@ -5,10 +5,10 @@
   "description": "The Calendar skill provides calendaring related capabilities and supports Office and Google calendars.",
   "publisherName": "Microsoft",
   "version": "0.8",
-  "iconUrl": "https://MyCalendarSkill-2dqxeb4.azurewebsites.net/images/CalendarSkill.png",
+  "iconUrl": "https://mycalendarskill-2dqxeb4.azurewebsites.net/images/CalendarSkill.png",
   "copyright": "Copyright (c) Microsoft Corporation. All rights reserved.",
   "license": "",
-  "privacyUrl": "https://MyCalendarSkill-2dqxeb4.azurewebsites.net/privacy.html",
+  "privacyUrl": "https://mycalendarskill-2dqxeb4.azurewebsites.net/privacy.html",
   "tags": [
     "calendar",
     "skill"
@@ -18,7 +18,7 @@
       "name": "production",
       "protocol": "BotFrameworkV3",
       "description": "Production endpoint for the Calendar Skill",
-      "endpointUrl": "https://MyCalendarSkill-2dqxeb4.azurewebsites.net/api/messages",
+      "endpointUrl": "https://mycalendarskill-2dqxeb4.azurewebsites.net/api/messages",
       "msAppId": "f94c09aa-8833-44e9-b83e-2d6771df974b"
     }
   ],
