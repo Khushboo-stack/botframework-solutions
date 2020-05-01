@@ -1,38 +1,47 @@
 {
+  "defaultLocale": "en-us",
   "cognitiveModels": {
     "en-us": {
       "dispatchModel": {
-        "appid": "",
-        "authoringkey": "",
-        "authoringRegion": "",
-        "name": "",
-        "region": "",
-        "subscriptionkey": "",
-        "type": "dispatch"
+        "region": "westus",
+        "authoringRegion": "westus",
+        "authoringkey": "89e94bcc81264aaeacd472e98d5b545d",
+        "subscriptionkey": "5c037efe513246e198a213d8880af3c9",
+        "version": "Dispatch",
+        "type": "dispatch",
+        "appid": "54682e50-3dff-4625-8d82-cc33ed172a8f",
+        "name": "VAMyServiceSkillen-us_Dispatch"
       },
       "languageModels": [
         {
-          "appid": "",
-          "authoringkey": "",
-          "authoringRegion": "",
-          "id": "",
-          "name": "",
-          "region": "",
-          "subscriptionkey": "",
-          "version": ""
+          "version": "0.1",
+          "region": "westus",
+          "authoringkey": "89e94bcc81264aaeacd472e98d5b545d",
+          "subscriptionkey": "5c037efe513246e198a213d8880af3c9",
+          "id": "General",
+          "appid": "aa68c5a6-f997-44a0-b855-9ad5928cb35c",
+          "endpoint": "https://vamyserviceskill-luisauthoring-opxsqle.cognitiveservices.azure.com/",
+          "name": "VAMyServiceSkillen-us_General"
         }
       ],
       "knowledgebases": [
         {
-          "endpointKey": "",
-          "hostname": "",
-          "id": "",
-          "kbId": "",
-          "name": "",
-          "subscriptionKey": ""
+          "hostname": "https://vamyserviceskill-qnahost-opxsqle.azurewebsites.net",
+          "name": "Chitchat",
+          "id": "Chitchat",
+          "kbId": "a5c8ad2e-d856-4c33-89a7-998eae9c16ab",
+          "subscriptionKey": "92f0e0c322fe447fba2b7fbbee443a38",
+          "endpointKey": "dd75a3e2-96c7-4ce7-896d-7ce624b9387b"
+        },
+        {
+          "hostname": "https://vamyserviceskill-qnahost-opxsqle.azurewebsites.net",
+          "name": "Faq",
+          "id": "Faq",
+          "kbId": "802f8f5a-0108-4c5a-b897-6903c1c4ddec",
+          "subscriptionKey": "92f0e0c322fe447fba2b7fbbee443a38",
+          "endpointKey": "dd75a3e2-96c7-4ce7-896d-7ce624b9387b"
         }
       ]
     }
-  },
-  "defaultLocale": "en-us"
+  }
 }

@@ -1,29 +1,29 @@
 {
+  "defaultLocale": "en-us",
   "cognitiveModels": {
     "en-us": {
       "languageModels": [
         {
-          "id": "General",
-          "name": "",
-          "appId": "",
-          "authoringKey": "",
-          "authoringRegion": "",
-          "subscriptionKey": "",
-          "version": "",
-          "region": ""
+          "version": "0.1",
+          "authoringRegion": "westus",
+          "region": "westus",
+          "authoringkey": "2e51ecab21514973814d7d42530adc27",
+          "subscriptionkey": "d092120fe2e54a04bad1aee09081014a",
+          "id": "Calendar",
+          "appid": "f965fbae-3ba8-4ce2-ae4d-a56de4c72871",
+          "name": "MyCalendarSkillen-us_Calendar"
         },
         {
-          "id": "Calendar",
-          "name": "",
-          "appId": "",
-          "authoringKey": "",
-          "authoringRegion": "",
-          "subscriptionKey": "",
-          "version": "",
-          "region": ""
+          "version": "0.1",
+          "authoringRegion": "westus",
+          "region": "westus",
+          "authoringkey": "2e51ecab21514973814d7d42530adc27",
+          "subscriptionkey": "d092120fe2e54a04bad1aee09081014a",
+          "id": "General",
+          "appid": "db8c4d08-a1ea-4d2f-b31a-d4bca53b9f68",
+          "name": "MyCalendarSkillen-us_General"
         }
       ]
     }
-  },
-  "defaultLocale": "en-us"
+  }
 }

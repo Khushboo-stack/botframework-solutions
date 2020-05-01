@@ -107,7 +107,7 @@
                 {
                     Data = new TaskModuleMetadata()
                     {
-                        TaskModuleFlowType = TeamsFlowType.CreateTicket_Form.ToString(),
+                        TaskModuleFlowType = TeamsFlowType.UpdateTicket_Form.ToString(),
                         FlowData = new Dictionary<string, object>
                         {
                             { "IncidentDetails", details }
@@ -124,7 +124,7 @@
                 {
                     Data = new TaskModuleMetadata()
                     {
-                        TaskModuleFlowType = TeamsFlowType.CreateTicket_Form.ToString(),
+                        TaskModuleFlowType = TeamsFlowType.DeleteTicket_Form.ToString(),
                         FlowData = new Dictionary<string, object>
                         {
                             { "IncidentId", details.Number }

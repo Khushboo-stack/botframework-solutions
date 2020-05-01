@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using ITSMSkill.Dialogs.Teams;
     using ITSMSkill.Dialogs.Teams.TicketTaskModule;
+    using ITSMSkill.Dialogs.Teams.TicketTaskModule.ITSMSkill.Dialogs.Teams;
     using ITSMSkill.Extensions.Teams;
     using ITSMSkill.Extensions.Teams.TaskModule;
     using ITSMSkill.Services;
@@ -31,10 +32,7 @@
                 //    $"{TeamsFlowType.CreateTicket_Form}",
                 //    () => new CreateTicketTeamsImplementation(settings, services, conversationState, serviceManager, telemetryClient, connectorClient)
                 //},
-                {
-                    $"{TeamsFlowType.UpdateTicket_Form}",
-                    () => new UpdateTicketTeamsImplementation(settings, services, conversationState, serviceManager, telemetryClient, connectorClient)
-                }
+
             };
 
             this.TaskModuleFetchSubmitMap = new Dictionary<string, Func<ITeamsTaskModuleHandler<TaskModuleResponse>>>
@@ -42,6 +40,14 @@
                 {
                     $"{TeamsFlowType.CreateTicket_Form}",
                     () => new CreateTicketTeamsImplementation(settings, services, conversationState, serviceManager, telemetryClient, connectorClient)
+                },
+                {
+                    $"{TeamsFlowType.UpdateTicket_Form}",
+                    () => new UpdateTicketTeamsImplementation(settings, services, conversationState, serviceManager, telemetryClient, connectorClient)
+                },
+                {
+                    $"{TeamsFlowType.DeleteTicket_Form}",
+                    () => new DeleteTicketTeamsImplementation(settings, services, conversationState, serviceManager, telemetryClient, connectorClient)
                 }
             };
         }

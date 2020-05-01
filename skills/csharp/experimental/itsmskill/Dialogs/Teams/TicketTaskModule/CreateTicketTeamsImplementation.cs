@@ -5,15 +5,13 @@
     using System.Threading;
     using System.Threading.Tasks;
     using AdaptiveCards;
-    using ITSMSkill.Dialogs.Teams.View;
-    using ITSMSkill.Extensions;
-    using ITSMSkill.Extensions.Teams;
-    using ITSMSkill.Extensions.Teams.TaskModule;
-    using ITSMSkill.Models;
-    using ITSMSkill.Models.UpdateActivity;
-    using ITSMSkill.Services;
-    using ITSMSkill.TeamsChannels;
-    using ITSMSkill.TeamsChannels.Invoke;
+    using global::ITSMSkill.Dialogs.Teams.View;
+    using global::ITSMSkill.Extensions.Teams;
+    using global::ITSMSkill.Models;
+    using global::ITSMSkill.Models.UpdateActivity;
+    using global::ITSMSkill.Services;
+    using global::ITSMSkill.TeamsChannels;
+    using global::ITSMSkill.TeamsChannels.Invoke;
     using Microsoft.Bot.Builder;
     using Microsoft.Bot.Connector;
     using Microsoft.Bot.Schema;
@@ -84,7 +82,9 @@
                 var urgency = dataObject.GetValue("IncidentUrgency");
 
                 // Create Ticket
-                var ticketResults = await CreateTicketAsync(title.Value<string>(), description.Value<string>(), (UrgencyLevel)Enum.Parse(typeof(UrgencyLevel), urgency.Value<string>()));
+                var management = _serviceManager.CreateManagement(_settings, state.AccessTokenResponse, state.ServiceCache);
+                var ticketResults = await management.CreateTicket(title.Value<string>(), description.Value<string>(), (UrgencyLevel)Enum.Parse(typeof(UrgencyLevel), urgency.Value<string>()));
+                //var ticketResults = await CreateTicketAsync(title.Value<string>(), description.Value<string>(), (UrgencyLevel)Enum.Parse(typeof(UrgencyLevel), urgency.Value<string>()));
 
                 // If Ticket Created Update Activity
                 if (ticketResults.Success)
@@ -152,11 +152,6 @@
                     }
                 }
             };
-        }
-
-        private async Task<TicketsResult> CreateTicketAsync(string title, string description, UrgencyLevel urgency)
-        {
-            return new TicketsResult { Success = true, Tickets = new Ticket[] { new Ticket { Number = "120874", Id = "120874", OpenedTime = DateTime.Now, Title = title, Description = description, Urgency = urgency, State = TicketState.New } } };
         }
     }
 }

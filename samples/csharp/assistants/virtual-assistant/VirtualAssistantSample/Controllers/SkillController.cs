@@ -4,6 +4,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
+using Microsoft.Bot.Schema;
+using System.Threading.Tasks;
 
 namespace VirtualAssistantSample.Controllers
 {
@@ -15,11 +17,10 @@ namespace VirtualAssistantSample.Controllers
     [ApiController]
     public class SkillController : ChannelServiceController
     {
+        private readonly ChannelServiceHandler _handler;
         public SkillController(ChannelServiceHandler handler)
             : base(handler)
         {
-<<<<<<< Updated upstream
-=======
             _handler = handler;
         }
 
@@ -35,7 +36,6 @@ namespace VirtualAssistantSample.Controllers
         {
             var result = await _handler.HandleReplyToActivityAsync(HttpContext.Request.Headers["Authorization"], conversationId, activityId, activity).ConfigureAwait(false);
             // Get Value passed from Skill To VA
-            var valuepassed = activity.Value;
             return new JsonResult(result);
         }
 
@@ -50,7 +50,6 @@ namespace VirtualAssistantSample.Controllers
         {
             var result = await _handler.HandleSendToConversationAsync(HttpContext.Request.Headers["Authorization"], conversationId, activity).ConfigureAwait(false);
             return new JsonResult(result);
->>>>>>> Stashed changes
         }
     }
 }
